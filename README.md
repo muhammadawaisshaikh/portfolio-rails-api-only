@@ -17,3 +17,13 @@ gem 'versionist'
 
 # 5. Creating version in a namespace in routes.rb
 rails generate versionist:new_api_version v1 V1 --path=value:v1
+
+# 6. Creating Models & Controllers under respective version directory
+
+# 7. defining resources in routes.rb
+resources :books
+
+# 8. defining CRUD methods in controllers 
+
+# 9. Getting responce from index method of controller
+http://localhost:3000/v1/socials

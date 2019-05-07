@@ -44,3 +44,83 @@ Processing by V1::SocialsController#index as HTML
 Completed 200 OK in 12ms (Views: 6.9ms | ActiveRecord: 3.2ms)
 
 
+Started GET "/v1/socials" for ::1 at 2019-05-07 13:09:04 +0500
+  
+SyntaxError (/home/ashaikh/projects/projects-sample/portfolio-rails-api-only/app/controllers/v1/socials_controller.rb:23: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/v1/socials_controller.rb:23: syntax error, unexpected keyword_end, expecting end-of-input
+Started GET "/v1/socials" for ::1 at 2019-05-07 13:10:15 +0500
+  
+SyntaxError (/home/ashaikh/projects/projects-sample/portfolio-rails-api-only/app/controllers/v1/socials_controller.rb:21: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/v1/socials_controller.rb:21: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/v1/socials" for ::1 at 2019-05-07 13:11:04 +0500
+  
+SyntaxError (/home/ashaikh/projects/projects-sample/portfolio-rails-api-only/app/controllers/v1/socials_controller.rb:22: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/v1/socials_controller.rb:22: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/v1/socials" for ::1 at 2019-05-07 13:11:48 +0500
+  
+SyntaxError (/home/ashaikh/projects/projects-sample/portfolio-rails-api-only/app/controllers/v1/socials_controller.rb:20: syntax error, unexpected end-of-input, expecting keyword_end
+  end
+     ^):
+  
+app/controllers/v1/socials_controller.rb:20: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/v1/socials" for ::1 at 2019-05-07 13:12:08 +0500
+  
+SyntaxError (/home/ashaikh/projects/projects-sample/portfolio-rails-api-only/app/controllers/v1/socials_controller.rb:22: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/v1/socials_controller.rb:22: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/v1/socials" for ::1 at 2019-05-07 13:12:17 +0500
+Processing by V1::SocialsController#index as */*
+  Parameters: {"social"=>{"linkedin"=>"linkedin", "twitter"=>"twitter", "github"=>"github"}}
+  [1m[36mSocial Load (0.5ms)[0m  [1m[34mSELECT "socials".* FROM "socials"[0m
+  ↳ app/controllers/v1/socials_controller.rb:4
+Completed 200 OK in 14ms (Views: 7.6ms | ActiveRecord: 4.6ms)
+
+
+Started POST "/v1/socials" for ::1 at 2019-05-07 13:13:08 +0500
+Processing by V1::SocialsController#create as */*
+  Parameters: {"social"=>{"linkedin"=>"linkedin", "twitter"=>"twitter", "github"=>"github"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/socials_controller.rb:10
+  [1m[36mSocial Create (0.3ms)[0m  [1m[32mINSERT INTO "socials" ("linkedin", "twitter", "github", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["linkedin", "linkedin"], ["twitter", "twitter"], ["github", "github"], ["created_at", "2019-05-07 08:13:08.145518"], ["updated_at", "2019-05-07 08:13:08.145518"]]
+  ↳ app/controllers/v1/socials_controller.rb:10
+  [1m[35m (14.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/v1/socials_controller.rb:10
+Completed 500 Internal Server Error in 75ms (ActiveRecord: 18.0ms)
+
+
+  
+NoMethodError (undefined method `reder' for #<V1::SocialsController:0x00007f1a90a75b78>
+Did you mean?  render):
+  
+app/controllers/v1/socials_controller.rb:11:in `create'
+Started GET "/v1/socials" for ::1 at 2019-05-07 13:13:25 +0500
+Processing by V1::SocialsController#index as */*
+  Parameters: {"social"=>{"linkedin"=>"linkedin", "twitter"=>"twitter", "github"=>"github"}}
+  [1m[36mSocial Load (0.3ms)[0m  [1m[34mSELECT "socials".* FROM "socials"[0m
+  ↳ app/controllers/v1/socials_controller.rb:4
+Completed 200 OK in 9ms (Views: 5.8ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/v1/socials" for ::1 at 2019-05-07 13:13:40 +0500
+Processing by V1::SocialsController#create as */*
+  Parameters: {"social"=>{"linkedin"=>"linkedin1", "twitter"=>"twitter1", "github"=>"github1"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/socials_controller.rb:10
+  [1m[36mSocial Create (0.3ms)[0m  [1m[32mINSERT INTO "socials" ("linkedin", "twitter", "github", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["linkedin", "linkedin1"], ["twitter", "twitter1"], ["github", "github1"], ["created_at", "2019-05-07 08:13:40.489711"], ["updated_at", "2019-05-07 08:13:40.489711"]]
+  ↳ app/controllers/v1/socials_controller.rb:10
+  [1m[35m (15.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/v1/socials_controller.rb:10
+Completed 201 Created in 19ms (Views: 0.4ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/v1/socials" for ::1 at 2019-05-07 13:14:05 +0500
+Processing by V1::SocialsController#index as */*
+  Parameters: {"social"=>{"linkedin"=>"linkedin", "twitter"=>"twitter", "github"=>"github"}}
+  [1m[36mSocial Load (0.3ms)[0m  [1m[34mSELECT "socials".* FROM "socials"[0m
+  ↳ app/controllers/v1/socials_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+
+
