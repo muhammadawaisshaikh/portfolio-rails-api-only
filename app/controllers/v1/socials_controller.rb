@@ -14,6 +14,11 @@ class V1::SocialsController < ApplicationController
     end
   end
 
+  def show
+    social = Social.find(params[:id])
+    render json: social, status: :ok
+  end  
+
   private
   
   def social_params

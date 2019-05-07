@@ -26,4 +26,7 @@ resources :books
 # 8. defining CRUD methods in controllers 
 
 # 9. Getting responce from index method of controller
-http://localhost:3000/v1/socials
+GET: http://localhost:3000/v1/socials
+
+# 10. Getting responce from show method of controller
+GET: http://localhost:3000/v1/socials/1
