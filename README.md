@@ -52,3 +52,6 @@ PUTS: http://localhost:3000/v1/socials/1
       "github": "github2"
     }
 }
+
+# 12. DESTROY method of controller
+DELETE: http://localhost:3000/v1/socials/3

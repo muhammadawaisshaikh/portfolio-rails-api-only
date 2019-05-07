@@ -28,6 +28,12 @@ class V1::SocialsController < ApplicationController
     end
   end
 
+  def destroy
+    social = Social.find(params[:id])
+    social.destroy
+    head 204
+  end
+
   private
   
   def social_params
