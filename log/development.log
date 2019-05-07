@@ -140,3 +140,29 @@ Processing by V1::SocialsController#show as */*
 Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.3ms)
 
 
+Started PUT "/v1/socials/2" for ::1 at 2019-05-07 13:24:39 +0500
+Processing by V1::SocialsController#update as */*
+  Parameters: {"social"=>{"linkedin"=>"linkedin2", "twitter"=>"twitter2", "github"=>"github2"}, "id"=>"2"}
+  [1m[36mSocial Load (0.3ms)[0m  [1m[34mSELECT  "socials".* FROM "socials" WHERE "socials"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/v1/socials_controller.rb:23
+Completed 500 Internal Server Error in 100ms (ActiveRecord: 3.4ms)
+
+
+  
+NameError (undefined local variable or method `social' for #<V1::SocialsController:0x00007f1a91079f38>):
+  
+app/controllers/v1/socials_controller.rb:24:in `update'
+Started PUT "/v1/socials/2" for ::1 at 2019-05-07 13:24:51 +0500
+Processing by V1::SocialsController#update as */*
+  Parameters: {"social"=>{"linkedin"=>"linkedin2", "twitter"=>"twitter2", "github"=>"github2"}, "id"=>"2"}
+  [1m[36mSocial Load (0.2ms)[0m  [1m[34mSELECT  "socials".* FROM "socials" WHERE "socials"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/v1/socials_controller.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/socials_controller.rb:24
+  [1m[36mSocial Update (0.5ms)[0m  [1m[33mUPDATE "socials" SET "linkedin" = $1, "twitter" = $2, "github" = $3, "updated_at" = $4 WHERE "socials"."id" = $5[0m  [["linkedin", "linkedin2"], ["twitter", "twitter2"], ["github", "github2"], ["updated_at", "2019-05-07 08:24:51.677937"], ["id", 2]]
+  ↳ app/controllers/v1/socials_controller.rb:24
+  [1m[35m (17.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/v1/socials_controller.rb:24
+Completed 200 OK in 32ms (Views: 0.5ms | ActiveRecord: 22.1ms)
+
+

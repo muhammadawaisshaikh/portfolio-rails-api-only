@@ -19,6 +19,15 @@ class V1::SocialsController < ApplicationController
     render json: social, status: :ok
   end  
 
+  def update
+    social = Social.find(params[:id])
+    if social.update(social_params)
+      render json: social, status: :ok
+    else
+      render json: { errors: social.errors }, status: :unprocessable_entity
+    end
+  end
+
   private
   
   def social_params

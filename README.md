@@ -25,8 +25,30 @@ resources :books
 
 # 8. defining CRUD methods in controllers 
 
-# 9. Getting responce from index method of controller
+# 9. CREATE method of controller
 GET: http://localhost:3000/v1/socials
 
-# 10. Getting responce from show method of controller
+{
+    "social": {
+      "linkedin": "linkedin2",
+      "twitter": "twitter2",
+      "github": "github2"
+    }
+}
+
+# 10. INDEX method of controller
+GET: http://localhost:3000/v1/socials
+
+# 11. SHOW method of controller
 GET: http://localhost:3000/v1/socials/1
+
+# 12. UPDATE method of controller
+PUTS: http://localhost:3000/v1/socials/1
+
+{
+    "social": {
+      "linkedin": "linkedin2",
+      "twitter": "twitter2",
+      "github": "github2"
+    }
+}
