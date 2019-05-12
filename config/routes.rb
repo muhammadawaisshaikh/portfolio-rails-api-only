@@ -5,5 +5,6 @@ Rails.application.routes.draw do
     resources :skills
     resources :abouts
     resources :experiences
+    resources :projects
   end
 end
