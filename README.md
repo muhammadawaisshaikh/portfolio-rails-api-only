@@ -1,5 +1,6 @@
 # portfolio-rails-api-only
 portfolio-rails-api-only
+REFRENCE: https://medium.com/otavio-henrique/creating-simple-rest-api-with-rails-5-1ba71b37cad
 
 # 1. creating API only app
 rails new library --api -d postgresql -T

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_07_072929) do
+ActiveRecord::Schema.define(version: 2019_05_12_101038) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,16 @@ ActiveRecord::Schema.define(version: 2019_05_07_072929) do
     t.string "language"
     t.integer "pages"
     t.datetime "publication_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "sliders", force: :cascade do |t|
+    t.string "title"
+    t.string "subTitle"
+    t.string "skillList"
+    t.string "sideImgDesktop"
+    t.string "avatarCenterMobile"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
