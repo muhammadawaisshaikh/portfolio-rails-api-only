@@ -7,5 +7,6 @@ Rails.application.routes.draw do
     resources :experiences
     resources :projects
     resources :testimonials
+    resources :contacts
   end
 end
