@@ -6,5 +6,6 @@ Rails.application.routes.draw do
     resources :abouts
     resources :experiences
     resources :projects
+    resources :testimonials
   end
 end

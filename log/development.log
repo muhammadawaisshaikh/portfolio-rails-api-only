@@ -745,3 +745,24 @@ Processing by V1::ProjectsController#index as HTML
 Completed 200 OK in 60ms (Views: 4.9ms | ActiveRecord: 35.2ms)
 
 
+Started GET "/v1/projects" for ::1 at 2019-05-12 20:51:19 +0500
+Processing by V1::ProjectsController#index as HTML
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/v1/projects_controller.rb:4
+Completed 200 OK in 5ms (Views: 1.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/v1/projects" for ::1 at 2019-05-12 20:51:25 +0500
+Processing by V1::ProjectsController#index as HTML
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/controllers/v1/projects_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/v1/testimonials" for ::1 at 2019-05-12 20:56:34 +0500
+Processing by V1::TestimonialsController#index as HTML
+  [1m[36mTestimonial Load (28.9ms)[0m  [1m[34mSELECT "testimonials".* FROM "testimonials"[0m
+  ↳ app/controllers/v1/testimonials_controller.rb:4
+Completed 200 OK in 59ms (Views: 1.5ms | ActiveRecord: 30.1ms)
+
+
