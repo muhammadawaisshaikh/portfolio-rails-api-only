@@ -3,5 +3,6 @@ Rails.application.routes.draw do
     resources :socials
     resources :sliders
     resources :skills
+    resources :abouts
   end
 end
