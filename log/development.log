@@ -490,3 +490,83 @@ Processing by V1::SlidersController#index as HTML
 Completed 200 OK in 11ms (Views: 6.3ms | ActiveRecord: 1.6ms)
 
 
+Started GET "/" for ::1 at 2019-05-12 20:09:18 +0500
+  [1m[35m (32.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ashaikh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ashaikh/.rvm/gems/ruby-2.5.1/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ashaikh/.rvm/gems/ruby-2.5.1/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (3.9ms)
+Completed 200 OK in 40ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/v1/skills" for ::1 at 2019-05-12 20:12:08 +0500
+Processing by V1::SkillsController#index as HTML
+  [1m[36mSkill Load (122.3ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  ↳ app/controllers/v1/skills_controller.rb:4
+Completed 200 OK in 200ms (Views: 6.2ms | ActiveRecord: 131.0ms)
+
+
+Started GET "/v1/skills" for ::1 at 2019-05-12 20:13:49 +0500
+Processing by V1::SkillsController#index as */*
+  Parameters: {"slider"=>{"title"=>"Hi, I'm Awais.", "subTitle"=>"I'm a | UI/UX Developer | Frontend Developer | Full Stack Developer", "skillList"=>"UI/UX | Angular | Javascript | React | Ruby on Rails | Php", "sideImgDesktop"=>"https://crossbrowsertesting.com/blog/wp-content/uploads/2017/04/Image-01-01.png", "avatarCenterMobile"=>"https://scontent.fkhi10-1.fna.fbcdn.net/v/t1.0-9/57226355_2156228901109135_2285942097859051520_n.jpg?_nc_cat=111&_nc_ht=scontent.fkhi10-1.fna&oh=57732a7a608bb90cbcd44a7c0054caa6&oe=5D382045"}, "skill"=>{}}
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  ↳ app/controllers/v1/skills_controller.rb:4
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/v1/skills" for ::1 at 2019-05-12 20:16:57 +0500
+Processing by V1::SkillsController#create as */*
+  Parameters: {"skill"=>{"imgUrl"=>"https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/skills_controller.rb:10
+  [1m[36mSkill Create (15.5ms)[0m  [1m[32mINSERT INTO "skills" ("imgUrl", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["imgUrl", "https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png"], ["created_at", "2019-05-12 15:16:57.224838"], ["updated_at", "2019-05-12 15:16:57.224838"]]
+  ↳ app/controllers/v1/skills_controller.rb:10
+  [1m[35m (27.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/v1/skills_controller.rb:10
+Completed 201 Created in 113ms (Views: 1.8ms | ActiveRecord: 80.0ms)
+
+
+Started POST "/v1/skills" for ::1 at 2019-05-12 20:17:38 +0500
+Processing by V1::SkillsController#create as */*
+  Parameters: {"skill"=>{"imgUrl"=>"https://angular.io/assets/images/logos/angular/angular.png"}}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/skills_controller.rb:10
+  [1m[36mSkill Create (0.4ms)[0m  [1m[32mINSERT INTO "skills" ("imgUrl", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["imgUrl", "https://angular.io/assets/images/logos/angular/angular.png"], ["created_at", "2019-05-12 15:17:38.875323"], ["updated_at", "2019-05-12 15:17:38.875323"]]
+  ↳ app/controllers/v1/skills_controller.rb:10
+  [1m[35m (18.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/v1/skills_controller.rb:10
+Completed 201 Created in 23ms (Views: 0.6ms | ActiveRecord: 19.2ms)
+
+
+Started GET "/v1/skills" for ::1 at 2019-05-12 20:17:48 +0500
+Processing by V1::SkillsController#index as HTML
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  ↳ app/controllers/v1/skills_controller.rb:4
+Completed 200 OK in 23ms (Views: 22.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2019-05-12 20:17:48 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
