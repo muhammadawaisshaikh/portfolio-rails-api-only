@@ -4,5 +4,6 @@ Rails.application.routes.draw do
     resources :sliders
     resources :skills
     resources :abouts
+    resources :experiences
   end
 end
