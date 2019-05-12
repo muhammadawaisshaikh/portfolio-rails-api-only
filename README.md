@@ -56,3 +56,8 @@ PUTS: http://localhost:3000/v1/socials/1
 
 # 12. DESTROY method of controller
 DELETE: http://localhost:3000/v1/socials/3
+
+# RAILS ERD GEM
+Rails ERD - Generate Entity-Relationship Diagrams for Rails applications
+https://github.com/voormedia/rails-erd
+Run bundle exec erd
