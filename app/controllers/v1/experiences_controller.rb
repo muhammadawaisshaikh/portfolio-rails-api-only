@@ -37,7 +37,7 @@ class V1::ExperiencesController < ApplicationController
   private
   
   def experience_params
-    params.require(:experience).permit(:imgUrl)
+    params.require(:experience).permit(:avatarUrl, :designation, :organization, :tenure)
   end
 
 end
