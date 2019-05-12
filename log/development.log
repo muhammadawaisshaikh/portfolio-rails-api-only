@@ -216,3 +216,12 @@ Processing by V1::SocialsController#index as HTML
 Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/" for ::1 at 2019-05-12 15:02:38 +0500
+  [1m[35m (32.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ashaikh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ashaikh/.rvm/gems/ruby-2.5.1/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ashaikh/.rvm/gems/ruby-2.5.1/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (14.7ms)
+Completed 200 OK in 74ms (Views: 56.1ms | ActiveRecord: 0.0ms)
+
+
