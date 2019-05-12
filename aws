@@ -1,0 +1,46 @@
+ssh -v -i portfolio-rails-app.pem ubuntu@ec2-xx-xx-xxx-xx.us-east-2.compute.amazonaws.com
+sudo -i
+service --status-all
+https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-ubuntu-18-04
+apt-get update
+apt-get install nginx
+systemctl status nginx.service
+curl localhost
+curl -I localhost
+
+In security group, add rules to allow all traffic from which ever IP to connect to our server instance
+
+
+sudo nano /etc/ssh/ssh_config
+
+
+
+
+# Delete enabled website file
+rm /etc/nginx/sites-enabled/default 
+
+# Edit file or code path
+nano /etc/nginx/sites-available/default 
+
+# Create a link file
+ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/ 
+
+# Check status of nginx syntax
+nginx -t 
+
+# Restart nginx service
+systemctl restart nginx.service 
+
+
+--------------------------- How to deploy Rails 5.2 on AWS EC2 + Ubuntu + Nginx + Passenger -----------------------------
+
+https://itnext.io/how-to-deploy-rails-5-2-on-aws-ec2-ubuntu-nginx-passenger-cd842c1c35ee
+
+
+
+--------------------------- Auto SSH Mechanism -----------------------------
+Host portfolio
+    User ubuntu
+    HostName ec2-xx-xx-xxx-xx.us-east-2.compute.amazonaws.com
+    IdentityFile ~/Downloads/portfolio-rails-app.pem
+    Port 22
