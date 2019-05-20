@@ -2,6 +2,9 @@
 portfolio-rails-api-only
 REFRENCE: https://medium.com/otavio-henrique/creating-simple-rest-api-with-rails-5-1ba71b37cad
 
+# Heroku Deployment
+https://portfolio-rails-api-only.herokuapp.com/v1/sliders
+
 # 1. creating API only app
 rails new library --api -d postgresql -T
 
