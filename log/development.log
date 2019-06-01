@@ -798,3 +798,21 @@ Processing by V1::ContactsController#index as HTML
 Completed 200 OK in 31ms (Views: 3.0ms | ActiveRecord: 11.6ms)
 
 
+Started GET "/v1/skills" for ::1 at 2019-05-29 11:32:22 +0500
+  [1m[35m (32.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ashaikh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by V1::SkillsController#index as */*
+  Parameters: {"slider"=>{"title"=>"Hi, I'm Awais.", "subTitle"=>"I'm a | UI/UX Developer | Frontend Developer | Full Stack Developer", "skillList"=>"UI/UX | Angular | Javascript | React | Ruby on Rails | Php", "sideImgDesktop"=>"https://crossbrowsertesting.com/blog/wp-content/uploads/2017/04/Image-01-01.png", "avatarCenterMobile"=>"https://scontent.fkhi10-1.fna.fbcdn.net/v/t1.0-9/57226355_2156228901109135_2285942097859051520_n.jpg?_nc_cat=111&_nc_ht=scontent.fkhi10-1.fna&oh=57732a7a608bb90cbcd44a7c0054caa6&oe=5D382045"}, "skill"=>{}}
+  [1m[36mSkill Load (24.6ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  ↳ app/controllers/v1/skills_controller.rb:4
+Completed 200 OK in 95ms (Views: 29.9ms | ActiveRecord: 85.9ms)
+
+
+Started GET "/v1/skills" for ::1 at 2019-05-29 11:32:31 +0500
+Processing by V1::SkillsController#index as */*
+  Parameters: {"slider"=>{"title"=>"Hi, I'm Awais.", "subTitle"=>"I'm a | UI/UX Developer | Frontend Developer | Full Stack Developer", "skillList"=>"UI/UX | Angular | Javascript | React | Ruby on Rails | Php", "sideImgDesktop"=>"https://crossbrowsertesting.com/blog/wp-content/uploads/2017/04/Image-01-01.png", "avatarCenterMobile"=>"https://scontent.fkhi10-1.fna.fbcdn.net/v/t1.0-9/57226355_2156228901109135_2285942097859051520_n.jpg?_nc_cat=111&_nc_ht=scontent.fkhi10-1.fna&oh=57732a7a608bb90cbcd44a7c0054caa6&oe=5D382045"}, "skill"=>{}}
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  ↳ app/controllers/v1/skills_controller.rb:4
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.2ms)
+
+
