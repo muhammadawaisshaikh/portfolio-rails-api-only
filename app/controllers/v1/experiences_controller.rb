@@ -1,6 +1,6 @@
 class V1::ExperiencesController < ApplicationController
   def index
-    experiences = Experience.all
+    experiences = Experience.all.order(id: :asc)
     render json: { experiences: experiences }, status: :ok
   end
 
