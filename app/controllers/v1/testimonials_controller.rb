@@ -1,6 +1,6 @@
 class V1::TestimonialsController < ApplicationController
   def index
-    testimonials = Testimonial.all.order(id: :asc)
+    testimonials = Testimonial.all.order(id: :desc)
     render json: { testimonials: testimonials }, status: :ok
   end
 
