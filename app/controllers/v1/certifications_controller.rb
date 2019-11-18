@@ -37,6 +37,6 @@ class V1::CertificationsController < ApplicationController
     private
     
     def certification_params
-        params.require(:certification).permit(:imgUrl)
+        params.require(:certification).permit(:image, :name, :organization, :organizationImage, :date, :type)
     end
 end
