@@ -8,5 +8,6 @@ Rails.application.routes.draw do
     resources :projects
     resources :testimonials
     resources :contacts
+    resources :certifications
   end
 end
