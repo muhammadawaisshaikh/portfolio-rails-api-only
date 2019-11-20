@@ -37,7 +37,7 @@ class V1::SocialsController < ApplicationController
   private
   
   def social_params
-    params.require(:social).permit(:linkedin, :twitter, :github)
+    params.require(:social).permit(:linkedin, :twitter, :github, :hackerrank)
   end
 
 end
