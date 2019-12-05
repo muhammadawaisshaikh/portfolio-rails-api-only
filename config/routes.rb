@@ -9,5 +9,6 @@ Rails.application.routes.draw do
     resources :testimonials
     resources :contacts
     resources :certifications
+    resources :educations
   end
 end
