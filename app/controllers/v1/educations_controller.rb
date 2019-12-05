@@ -1,6 +1,6 @@
 class V1::EducationsController < ApplicationController
     def index
-      educations = Education.all
+      educations = Education.all.order(id: :desc)
       render json: { educations: educations }, status: :ok
     end
   
