@@ -25,6 +25,18 @@ ActiveRecord::Schema.define(version: 2019_12_05_183445) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "books", force: :cascade do |t|
+    t.string "title"
+    t.string "author"
+    t.string "weight"
+    t.string "publisher"
+    t.string "language"
+    t.integer "pages"
+    t.datetime "publication_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "certifications", force: :cascade do |t|
     t.string "image"
     t.string "name"
