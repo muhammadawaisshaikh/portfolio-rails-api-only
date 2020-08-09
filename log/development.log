@@ -1155,3 +1155,22 @@ Processing by V1::SocialsController#index as HTML
 Completed 200 OK in 63ms (Views: 1.8ms | ActiveRecord: 18.6ms)
 
 
+Started GET "/v1/socials" for ::1 at 2020-08-09 23:27:13 +0500
+Processing by V1::SocialsController#index as */*
+  [1m[36mSocial Load (0.4ms)[0m  [1m[34mSELECT "socials".* FROM "socials"[0m
+  ↳ app/controllers/v1/socials_controller.rb:4
+Completed 200 OK in 5ms (Views: 1.4ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/v1/socials" for ::1 at 2020-08-09 23:29:07 +0500
+Processing by V1::SocialsController#create as */*
+  Parameters: {"linkedin"=>"asdasd", "twitter"=>"asdasd", "github"=>"asdasd", "hackerrank"=>"asdasd", "medium_profile"=>"asdasd", "dev_to_profile"=>"asdasd", "social"=>{"linkedin"=>"asdasd", "twitter"=>"asdasd", "github"=>"asdasd", "hackerrank"=>"asdasd", "medium_profile"=>"asdasd", "dev_to_profile"=>"asdasd"}}
+  [1m[35m (3.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/v1/socials_controller.rb:10
+  [1m[36mSocial Create (11.4ms)[0m  [1m[32mINSERT INTO "socials" ("linkedin", "twitter", "github", "created_at", "updated_at", "hackerrank", "medium_profile", "dev_to_profile") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["linkedin", "asdasd"], ["twitter", "asdasd"], ["github", "asdasd"], ["created_at", "2020-08-09 18:29:07.357396"], ["updated_at", "2020-08-09 18:29:07.357396"], ["hackerrank", "asdasd"], ["medium_profile", "asdasd"], ["dev_to_profile", "asdasd"]]
+  ↳ app/controllers/v1/socials_controller.rb:10
+  [1m[35m (12.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/v1/socials_controller.rb:10
+Completed 201 Created in 38ms (Views: 0.5ms | ActiveRecord: 29.1ms)
+
+
