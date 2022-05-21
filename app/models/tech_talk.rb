@@ -1,0 +1,2 @@
+class TechTalk < ApplicationRecord
+end

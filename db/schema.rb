@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_06_195333) do
+ActiveRecord::Schema.define(version: 2022_05_21_172015) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,18 +21,6 @@ ActiveRecord::Schema.define(version: 2020_07_06_195333) do
     t.string "typoBold"
     t.string "skillsTypo"
     t.string "sideAvatar"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "books", force: :cascade do |t|
-    t.string "title"
-    t.string "author"
-    t.string "weight"
-    t.string "publisher"
-    t.string "language"
-    t.integer "pages"
-    t.datetime "publication_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -111,6 +99,15 @@ ActiveRecord::Schema.define(version: 2020_07_06_195333) do
     t.string "dev_to_profile"
   end
 
+  create_table "tech_talks", force: :cascade do |t|
+    t.string "title"
+    t.datetime "date"
+    t.string "organization"
+    t.string "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "testimonials", force: :cascade do |t|
     t.string "imgUrl"
     t.string "name"
@@ -118,6 +115,20 @@ ActiveRecord::Schema.define(version: 2020_07_06_195333) do
     t.string "recommendation"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "authentication_token", limit: 30
+    t.index ["authentication_token"], name: "index_users_on_authentication_token", unique: true
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
 end
