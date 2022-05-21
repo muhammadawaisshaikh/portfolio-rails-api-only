@@ -10,5 +10,6 @@ Rails.application.routes.draw do
     resources :contacts
     resources :certifications
     resources :educations
+    resources :tech_talks
   end
 end

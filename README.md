@@ -23,6 +23,8 @@ gem 'versionist'
 rails generate versionist:new_api_version v1 V1 --path=value:v1
 
 # 6. Creating Models & Controllers under respective version directory
+rails g model Book title:string author:string weight:string publisher:string language:string pages:integer publication_date:datetime
+rails g controller v1/tech_talks
 
 # 7. defining resources in routes.rb
 resources :books
