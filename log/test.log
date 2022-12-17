@@ -1,0 +1,60 @@
+  [1m[35m (43.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "library_test"[0m
+  [1m[35m (108.3ms)[0m  [1m[35mCREATE DATABASE "library_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "abouts" CASCADE[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "abouts" ("id" bigserial primary key, "title" character varying, "typo" character varying, "typoBold" character varying, "skillsTypo" character varying, "sideAvatar" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "certifications" CASCADE[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "certifications" ("id" bigserial primary key, "image" character varying, "name" character varying, "organization" character varying, "organizationImage" character varying, "date" character varying, "kind" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "contacts" CASCADE[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "contacts" ("id" bigserial primary key, "email" character varying, "mobile" character varying, "location" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "educations" CASCADE[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "educations" ("id" bigserial primary key, "image" character varying, "university" character varying, "degree" character varying, "tenure" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "experiences" CASCADE[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "experiences" ("id" bigserial primary key, "avatarUrl" character varying, "designation" character varying, "organization" character varying, "tenure" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "projects" CASCADE[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "projects" ("id" bigserial primary key, "imgUrl" character varying, "name" character varying, "associationWith" character varying, "role" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "site_url" character varying)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "skills" CASCADE[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "skills" ("id" bigserial primary key, "imgUrl" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "sliders" CASCADE[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "sliders" ("id" bigserial primary key, "title" character varying, "subTitle" character varying, "skillList" character varying, "sideImgDesktop" character varying, "avatarCenterMobile" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "socials" CASCADE[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "socials" ("id" bigserial primary key, "linkedin" character varying, "twitter" character varying, "github" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "hackerrank" character varying, "medium_profile" character varying, "dev_to_profile" character varying)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "tech_talks" CASCADE[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "tech_talks" ("id" bigserial primary key, "title" character varying, "date" timestamp, "organization" character varying, "image" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "testimonials" CASCADE[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "testimonials" ("id" bigserial primary key, "imgUrl" character varying, "name" character varying, "designation" character varying, "recommendation" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "authentication_token" character varying(30))[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_authentication_token" ON "users"  ("authentication_token")[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20220521172015)[0m
+  [1m[35m (2.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200706195305),
+(20190512102815),
+(20190512101606),
+(20200706194639),
+(20191205183445),
+(20200706195333),
+(20191119114922),
+(20190507072929),
+(20190512102639),
+(20190512101038),
+(20190512101250),
+(20191118134738),
+(20191120071603),
+(20190512102907),
+(20190512102017);
+
+[0m
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "test"], ["created_at", "2022-12-17 10:55:30.919418"], ["updated_at", "2022-12-17 10:55:30.919418"]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
